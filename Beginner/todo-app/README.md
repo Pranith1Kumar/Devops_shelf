@@ -25,6 +25,8 @@ Node.js is a JavaScript runtime based on Chrome's V8 engine. It allows you to ex
 ## Project Overview
 You will create a simple To-Do List API, containerize it using Docker, and push the code to a GitHub repository.
 
+![Project flow](https://github.com/Pranith1Kumar/Devops_shelf/blob/ed3e341c06da309d08873adf7253c9ca66e6035d/Beginner/todo-app/DSF-todo.drawio.png)
+
 # Steps to Follow
 1. Install Prerequisites
 Ensure you have the following installed:
@@ -254,3 +256,34 @@ You can check the images listed there the container is deleted so along with con
 ![Stop cont](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps%20-a.png)
 
   
+12. Create a Docker Hub Account
+- If you don’t already have a Docker Hub account, follow these steps:
+- Go to Docker Hub.
+- Click Sign Up and create an account.
+
+Log in to Docker Hub from the Command Line
+- Open your terminal.
+- Log in to Docker Hub using your Docker Hub credentials:
+```
+docker login
+```
+- Enter your Docker Hub username and password when prompted.
+
+![Docker login](https://github.com/Pranith1Kumar/Devops_shelf/blob/ed3e341c06da309d08873adf7253c9ca66e6035d/Beginner/todo-app/docker%20login.png)
+
+Tag Your Docker Image
+- Before you can push the image to Docker Hub, you need to tag it with your Docker Hub username and a repository name.
+- If your image is named todo-app, you will tag it with the format username/repository-name:tag. For example:
+```
+docker tag todo-app <your-dockerhub-username>/todo-app
+```
+Replace `<your-dockerhub-username>` with your Docker Hub username.
+
+Push the Docker Image to Docker Hub
+- After tagging the image, push it to your Docker Hub repository:
+```
+docker push <your-dockerhub-username>/todo-app
+```
+Docker will start uploading the image to Docker Hub. It may take some time depending on the image size and your internet speed.
+
+![Succussfully uploaded to docker hub](https://github.com/Pranith1Kumar/Devops_shelf/blob/ed3e341c06da309d08873adf7253c9ca66e6035d/Beginner/todo-app/docker%20hub.png)
