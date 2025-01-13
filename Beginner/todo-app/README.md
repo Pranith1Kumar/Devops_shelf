@@ -205,3 +205,25 @@ You will noice a output is updated with task added
 or 
 
 ![Final Output](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/final%20output.png)
+
+10. Remove all the tasks
+- Run the cURL Command Open your terminal and use the following command
+```
+curl -X DELETE http://localhost:3000/todos
+```
+View the Response if successful, you will see a response like this
+```
+{"message": "All tasks deleted!" }
+```
+![Successfull deletion of all tasks](https://github.com/Pranith1Kumar/Devops_shelf/blob/4aacc729a67becce223ece18fd43d6a1eda60f1a/Beginner/todo-app/delete%20todo.png)
+
+- Verify All Tasks Are Deleted
+- You can confirm by fetching the list of tasks with a GET request
+```
+curl -X GET http://localhost:3000/todo
+```
+![Verify all tasks are deleted](https://github.com/Pranith1Kumar/Devops_shelf/blob/4aacc729a67becce223ece18fd43d6a1eda60f1a/Beginner/todo-app/verify%20taskes%20are%20deleted.png)
+
+`curl`: The command-line tool for HTTP requests.
+`-X DELETE`: Specifies the HTTP method as DELETE.
+`http://localhost:3000/todos`: The endpoint to send the DELETE request to.
