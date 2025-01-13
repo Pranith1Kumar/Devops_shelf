@@ -1,6 +1,29 @@
+**Docker**
+# What is Docker?
+Docker is a platform for building, delivering, and managing containerized applications. A container is a small, independent, executable software package that contains everything required to run a program (code, libraries, and dependencies). It encapsulates your program and its dependencies, ensuring that it works reliably across many environments (development, testing, and production).
+- Containerization: Docker allows you to bundle the To-Do application and its dependencies (such as the Node.js runtime and libraries) into a container.
+- Portability: If Docker is installed, the application may operate anywhere (for example, on the local machine or in the cloud).
+- Ease of Deployment: You may build and deploy the application container with one easy command.
+
+**Git**
+# What is git?
+Git is a version control system that developers use to monitor code changes, communicate with others, and manage numerous project versions. It allows you to efficiently manage your project's code, revert to prior versions if needed, and interact with others via platforms such as GitHub.
+- Version Control: Keeps track of code modifications.
+- Collaboration: You may share the project with others or your future self by submitting it to a GitHub repository.
+- Backup: Your code is safely stored in a remote repository (GitHub).
+- Commands used: `git init`, `git add`, `git commit`, and `git push`.
+
+**Node.js**
+# What is Node.js?
+Node.js is a JavaScript runtime based on Chrome's V8 engine. It allows you to execute JavaScript code on the server side (backend). Node.js enables you to develop scalable and efficient server-side applications in JavaScript, a client-side language.
+- Backend Development: Node.js runs the Express.js framework, which powers the To-Do app's RESTful API.
+- Dependency Management: Node.js ships with npm (Node Package Manager), which is used to install project dependencies such as Express.js.
+- Commands used include npm init and npm install.
+
+
+
 ## Project Overview
 You will create a simple To-Do List API, containerize it using Docker, and push the code to a GitHub repository.
-
 
 # Steps to Follow
 1. Install Prerequisites
@@ -120,7 +143,7 @@ docker run -p 3000:3000 todo-app
 ```
 ![run container](https://github.com/Pranith1Kumar/Devops_self/blob/26540cbd77fe662130f257c2f7b48cd7b3efdeae/Beginner/todo-app/docker%20container%20start.png)
 
-- Open a browser or Postman to test:
+- Open a browser:
 ```
 http://localhost:3000/todos
 ```
@@ -162,7 +185,7 @@ git push -u origin main
 ```
 ![Push to git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/git-push.png)
 
-- Successfully addeed to git
+Successfully addeed to git
 ![Successfully added to git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/succ%20to%20github.png)
 
 9. Run the following command in powershell or cmd to add a task to the To-Do list
