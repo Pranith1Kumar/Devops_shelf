@@ -14,17 +14,20 @@ Ensure you have the following installed:
 2. Set Up the Project
 - Open a terminal and create a project folder
 ```
-bash
 mkdir todo-docker-project
 cd todo-docker-project
 ```
 
 ![Dir creation](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/directory%20flow.png)
 
-- Initialize a new Node.js project
-`npm init -y`
+- Initialize a new `Node.js` project
+```
+npm init -y
+```
 - Install `Express.js`
-```npm install express```
+```
+npm install express
+```
 
 3. Write the Application Code
 - Create a file index.js in the project folder.
@@ -66,7 +69,7 @@ app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
 ```
-4. Create a Dockerfile
+4. Create a `Dockerfile`
 - In the same folder, create a file named Dockerfile.
 - Add the following content
 
@@ -93,50 +96,79 @@ EXPOSE 3000
 CMD ["node", "index.js"]
 ```
 
-5. Create a .dockerignore File
+5. Create a `.dockerignore` File
 - In the project folder, create a file .dockerignore.
 - Add the following content to avoid unnecessary files in the Docker image:
-```node_modules```
-```npm-debug.log```
+```
+node_modules
+npm-debug.log
+```
 
 6. Build the Docker Image
 - Open the terminal in the project folder.
 - Build the image:
-```docker build -t todo-app .```
+```
+docker build -t todo-app .
+```
 
 ![Docker build success](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/Docker%20build.png)
 
 7. Run the Application in Docker
 - Start a container:
-```docker run -p 3000:3000 todo-app```
-
+```
+docker run -p 3000:3000 todo-app
+```
+![run container](https://github.com/Pranith1Kumar/Devops_self/blob/26540cbd77fe662130f257c2f7b48cd7b3efdeae/Beginner/todo-app/docker%20container%20start.png)
 
 - Open a browser or Postman to test:
-```http://localhost:3000/todos``` → Fetch all tasks.
+```
+http://localhost:3000/todos
+```
+→ Fetch all tasks.
 You see the empty `[]` now you need to add tasks
 
 8. Push the Code to GitHub
 - Initialize a Git repository
-```git init```
+```
+git init
+```
 ![Intialized git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/git-init.png)
 - Add a .gitignore file and include:
-```node_modules/```
+```
+node_modules/
+```
 - Stage and commit the code:
-```git add .```
-```git commit -m "Initial commit - To-Do List App"```
+```
+git add .
+```
+```
+git commit -m "Initial commit - To-Do List App"
+```
 ![adding git to current dir](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/git-add.png)
 - Create a new repository on GitHub and link it to your local repository:
-```git remote add origin <your-github-repo-url>```
-```git branch -M main```
+```
+git remote add origin <your-github-repo-url>
+```
+Ex: 
+```
+git remote add origin https://github.com/Pranith1Kumar/Devops_self
+```
+```
+git branch -M main
+```
 ![Intailized remote to git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/remote.png)
-```git push -u origin main```
+```
+git push -u origin main
+```
 ![Push to git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/git-push.png)
 
 - Successfully addeed to git
 ![Successfully added to git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/succ%20to%20github.png)
 
 9. Run the following command in powershell or cmd to add a task to the To-Do list
-`curl -X POST -H "Content-Type: application/json" -d "{\"task\":\"Learn Docker\"}" http://localhost:3000/todos`
+```
+curl -X POST -H "Content-Type: application/json" -d "{\"task\":\"Learn Docker\"}" http://localhost:3000/todos
+```
 
 ![Task added](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/task%20added%20succ.png)
 
@@ -146,4 +178,7 @@ You will noice a output is updated with task added
     "todos": ["Learn Docker"]
 }
 ```
+
+or 
+
 ![Final Output](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/final%20output.png)
