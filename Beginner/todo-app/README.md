@@ -231,32 +231,7 @@ curl -X GET http://localhost:3000/todo
 - `http://localhost:3000/todos`: The endpoint to send the DELETE request to.
 
 
-11. Cleanup
-Steps to remove container:
-- Check the running container
-```docker ps```
-- To list all containers (Running,stopped,paused).
-```docker ps -a```
--  Copy the container id and use along with below command to stop container
-```
-docker stop <containerid>
-```
-![Docker ps](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps.png)
-- Remove the container
-```
-docker rm <containerid>
-``` 
-- Run below command to list all docker images.
-```
-docker images
-```
-You can check the images listed there the container is deleted so along with container image aslo deleted.
-- (optional) If you want to remove any images from docker ```docker rmi <imageid>``` if you want to delete image.
-
-![Stop cont](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps%20-a.png)
-
-  
-12. Create a Docker Hub Account
+11. Create a Docker Hub Account
 - If you don’t already have a Docker Hub account, follow these steps:
 - Go to Docker Hub.
 - Click Sign Up and create an account.
@@ -287,3 +262,30 @@ docker push <your-dockerhub-username>/todo-app
 Docker will start uploading the image to Docker Hub. It may take some time depending on the image size and your internet speed.
 
 ![Succussfully uploaded to docker hub](https://github.com/Pranith1Kumar/Devops_shelf/blob/ed3e341c06da309d08873adf7253c9ca66e6035d/Beginner/todo-app/docker%20hub.png)
+
+
+12. Cleanup
+Steps to remove container:
+- Check the running container
+```docker ps```
+- To list all containers (Running,stopped,paused).
+```docker ps -a```
+-  Copy the container id and use along with below command to stop container
+```
+docker stop <containerid>
+```
+![Docker ps](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps.png)
+- Remove the container
+```
+docker rm <containerid>
+``` 
+- Run below command to list all docker images.
+```
+docker images
+```
+You can check the images listed there the container is deleted so along with container image aslo deleted.
+- (optional) If you want to remove any images from docker ```docker rmi <imageid>``` if you want to delete image.
+
+![Stop cont](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps%20-a.png)
+
+  
