@@ -224,9 +224,9 @@ curl -X GET http://localhost:3000/todo
 ```
 ![Verify all tasks are deleted](https://github.com/Pranith1Kumar/Devops_shelf/blob/4aacc729a67becce223ece18fd43d6a1eda60f1a/Beginner/todo-app/verify%20taskes%20are%20deleted.png)
 
-`curl`: The command-line tool for HTTP requests.
-`-X DELETE`: Specifies the HTTP method as DELETE.
-`http://localhost:3000/todos`: The endpoint to send the DELETE request to.
+- `curl`: The command-line tool for HTTP requests.
+- `-X DELETE`: Specifies the HTTP method as DELETE.
+- `http://localhost:3000/todos`: The endpoint to send the DELETE request to.
 
 
 11. Cleanup
@@ -235,15 +235,21 @@ Steps to remove container:
 ```docker ps```
 - To list all containers (Running,stopped,paused).
 ```docker ps -a```
--  Copy the container id and use below command to stop container
-```docker stop <containerid>```
+-  Copy the container id and use along with below command to stop container
+```
+docker stop <containerid>
+```
 ![Docker ps](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps.png)
 - Remove the container
-```docker rm <containerid>``` 
+```
+docker rm <containerid>
+``` 
 - Run below command to list all docker images.
-```docker images```
-(optional) If you want to remove any images from docker.
-```docker rmi <imageid>``` - If you want to delete image
+```
+docker images
+```
+You can check the images listed there the container is deleted so along with container image aslo deleted.
+- (optional) If you want to remove any images from docker ```docker rmi <imageid>``` if you want to delete image.
 
 ![Stop cont](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps%20-a.png)
 
