@@ -13,8 +13,11 @@ Ensure you have the following installed:
 
 2. Set Up the Project
 - Open a terminal and create a project folder
-`mkdir todo-docker-project`
-```cd todo-docker-project```
+```
+bash
+mkdir todo-docker-project
+cd todo-docker-project
+```
 
 ![Dir creation](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/directory%20flow.png)
 
