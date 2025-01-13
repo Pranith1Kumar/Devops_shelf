@@ -40,7 +40,7 @@ Ensure you have the following installed:
 mkdir todo-docker-project
 cd todo-docker-project
 ```
-
+- It will look like
 ![Dir creation](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/directory%20flow.png)
 
 - Initialize a new `Node.js` project
@@ -227,3 +227,24 @@ curl -X GET http://localhost:3000/todo
 `curl`: The command-line tool for HTTP requests.
 `-X DELETE`: Specifies the HTTP method as DELETE.
 `http://localhost:3000/todos`: The endpoint to send the DELETE request to.
+
+
+11. Cleanup
+Steps to remove container:
+- Check the running container
+```docker ps```
+- To list all containers (Running,stopped,paused).
+```docker ps -a```
+-  Copy the container id and use below command to stop container
+```docker stop <containerid>```
+![Docker ps](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps.png)
+- Remove the container
+```docker rm <containerid>``` 
+- Run below command to list all docker images.
+```docker images```
+(optional) If you want to remove any images from docker.
+```docker rmi <imageid>``` - If you want to delete image
+
+![Stop cont](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps%20-a.png)
+
+  
