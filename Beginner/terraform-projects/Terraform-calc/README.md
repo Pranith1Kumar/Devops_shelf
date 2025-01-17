@@ -2,8 +2,8 @@
 
 
 1. Prerequisites
-Install Terraform based on your operating system ([Terraform download](https://developer.hashicorp.com/terraform/install).
-Install Docker ([docker download](https://www.docker.com/products/docker-desktop/).
+- Install Terraform based on your operating system ([Terraform download](https://developer.hashicorp.com/terraform/install)).
+- Install Docker ([docker download](https://www.docker.com/products/docker-desktop/)).
 - Docker desktop should be running in the background when you are strating this project.
 Basic knowledge of Python, Powershell, Docker, and Terraform.
 
@@ -72,6 +72,8 @@ Build the image:
 Run the container:
 ```docker run -it python-calculator```
 
+![Docker build](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/docker%20build.png)
+
 Now you have checked the container is runnning successfully using `docker ps`.
 
 Step 4: Configure Terraform for Docker Deployment
@@ -138,16 +140,26 @@ output "image_name" {
 Step 5: Initialize and Apply Terraform
 Initialize Terraform:
 ```terraform init```
+
+![tf init](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/init.png)
+
 Validate the configuration:
 ```terraform validate```
+
+![tf validate](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/validate.png).
+
 Apply the Terraform configuration:
 ```terraform apply```
+
+![tf apply](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/apply.png).
 
 Step 6: Verify Deployment
 List running containers:
 ```docker ps```
 Attach to the container to interact with the calculator:
 ```docker attach python-calculator-app```
+
+1[docker exec](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/attach-exec.png).
 
 
 4. Push to docker hub.
@@ -160,11 +172,14 @@ Create a Docker Hub Account
 Open your terminal.
 Log in to Docker Hub using your Docker Hub credentials:
 ```docker login```
-Tag Your Docker Image
 
-Before you can push the image to Docker Hub, you need to tag it with your Docker Hub username and a repository name.
-If your image is named todo-app, you will tag it with the format username/repository-name:tag. For example:
+- Tag Your Docker Image
+- Before you can push the image to Docker Hub, you need to tag it with your Docker Hub username and a repository name.
+- If your image is named todo-app, you will tag it with the format username/repository-name:tag. For example:
 ```docker tag todo-app <your-dockerhub-username>/todo-app```
+
+1[docker tag](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/docker%20hub1.png).
+
 Replace <your-dockerhub-username> with your Docker Hub username.
 
 Push the Docker Image to Docker Hub
@@ -172,3 +187,14 @@ Push the Docker Image to Docker Hub
 After tagging the image, push it to your Docker Hub repository:
 ```docker push <your-dockerhub-username>/todo-app```
 Docker will start uploading the image to Docker Hub. It may take some time depending on the image size and your internet speed.
+
+![successfully uploaded to docker hub](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/docker%20hub%202.png).
+
+5. Cleanup
+- Cleanup
+To stop and remove the container and image:
+
+Destroy Terraform-managed resources:
+```terraform destroy```
+Verify that resources are cleaned:
+```docker ps -a```
