@@ -159,7 +159,7 @@ List running containers:
 Attach to the container to interact with the calculator:
 ```docker attach python-calculator-app```
 
-1[docker exec](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/attach-exec.png).
+![docker exec](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/attach-exec.png).
 
 
 4. Push to docker hub.
@@ -178,7 +178,7 @@ Log in to Docker Hub using your Docker Hub credentials:
 - If your image is named todo-app, you will tag it with the format username/repository-name:tag. For example:
 ```docker tag todo-app <your-dockerhub-username>/todo-app```
 
-1[docker tag](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/docker%20hub1.png).
+![docker tag](https://github.com/Pranith1Kumar/Devops_shelf/blob/49a22059c298fa2579e55662deb2b984998c701a/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/docker%20hub1.png).
 
 Replace <your-dockerhub-username> with your Docker Hub username.
 
@@ -194,7 +194,11 @@ Docker will start uploading the image to Docker Hub. It may take some time depen
 - Cleanup
 To stop and remove the container and image:
 
-Destroy Terraform-managed resources:
+- Destroy Terraform-managed resources:
 ```terraform destroy```
-Verify that resources are cleaned:
+
+![tf destroy](https://github.com/Pranith1Kumar/Devops_shelf/blob/e1e8c4e11e04b7ab59c85d2f8097ede0a99d3e87/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/destroy%201.png).
+
+- Verify that resources are cleaned:
 ```docker ps -a```
+![tf check](https://github.com/Pranith1Kumar/Devops_shelf/blob/e1e8c4e11e04b7ab59c85d2f8097ede0a99d3e87/Beginner/terraform-projects/Terraform-calc/Terraform-calc-imgs/destroy%202.png).
