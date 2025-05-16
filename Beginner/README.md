@@ -7,7 +7,7 @@ This Repo contains all level projects from Begineer level to profisional level w
 - [Python-calculator](https://github.com/Pranith1Kumar/Devops_shelf/tree/0f9d094d5f80ad774d3bde1ef6bc34b9a0b142b3/Beginner/terraform-projects)
 
 # Ansible Projects:
-- [Flask Deployer](https://github.com/Pranith1Kumar/Devops_shelf/tree/bb1884a6b84493eac54fa128619d0b77c333ae3b/Beginner/Ansible-Projects/Pyfldep)
+- [Ansible Master-Slave Architecture Project](https://github.com/Pranith1Kumar/Devops_shelf/tree/e5cd143aea30c12d1e993d4b016c46d5a363afa8/Beginner/Ansible-Projects)
 
 # Jenkins
 - [Python calculator application using docker and jenkins](https://github.com/Pranith1Kumar/jenpydo)
