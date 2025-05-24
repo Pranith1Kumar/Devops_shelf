@@ -12,7 +12,7 @@ This Repo contains all level projects from Begineer level to profisional level w
 1. [Ansible Master-Slave Architecture Project](https://github.com/Pranith1Kumar/Devops_shelf/tree/e5cd143aea30c12d1e993d4b016c46d5a363afa8/Beginner/Ansible-Projects)
 
 # Jenkins
-1. [Python calculator application using docker and jenkins](https://github.com/Pranith1Kumar/jenpydo)
+1. [Python calculator application using docker and jenkins](https://github.com/Pranith1Kumar/Devops_shelf/tree/37946e95437059f95c529984b560d5625a76b7d3/Beginner/Jenkins)
 
 # GitHub Actions
 1. [Weather notifier](https://github.com/Pranith1Kumar/Devops_shelf/tree/1f2ea6e283e0fa0465daea6a82dcabf7894feb31/Beginner/Github_Actions)
