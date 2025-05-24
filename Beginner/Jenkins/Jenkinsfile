@@ -1,0 +1,29 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    docker.build("myapp:${env.BUILD_ID}")
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                // Add commands to run tests
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    docker.image("myapp:${env.BUILD_ID}").run('-d -p 3000:3000')
+                }
+            }
+        }
+    }
+    post {
+        always {
+            cleanWs()
+        }
+    }
+}
