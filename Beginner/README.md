@@ -6,7 +6,7 @@ This Repo contains all level projects from Begineer level to profisional level w
 3. [Ask for a Date App](https://github.com/Pranith1Kumar/Ask-for-a-date-app/tree/main)
 
 # Terraform Projects:
-1. [Python-calculator](https://github.com/Pranith1Kumar/Devops_shelf/tree/0f9d094d5f80ad774d3bde1ef6bc34b9a0b142b3/Beginner/terraform-projects)
+1. [Python-calculator](https://github.com/Pranith1Kumar/Devops_shelf/tree/d322f271051809f31de68721d234edaa9a821cbb/Beginner/terraform-projects)
 
 # Ansible Projects:
 1. [Ansible Master-Slave Architecture Project](https://github.com/Pranith1Kumar/Devops_shelf/tree/e5cd143aea30c12d1e993d4b016c46d5a363afa8/Beginner/Ansible-Projects)
