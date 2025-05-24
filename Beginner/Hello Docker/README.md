@@ -94,13 +94,13 @@ Run the following in the terminal inside your project folder:
 **-p flag:** Maps a container port to a host port, enabling external access to the app.
 
 ```bash
-docker build -t helloapp:latest .
+docker build -t myapp:latest .
 ```
 
 ![Docker build](https://github.com/user-attachments/assets/d1405140-60b2-4284-94b8-681eb45e1816)
 
 
-- `helloapp` is the name of the image.
+- `myapp` is the name of the image.
 - `.` refers to the current directory where Dockerfile is located.
 
 ## Step 5: Run the Docker Container
@@ -110,7 +110,7 @@ docker build -t helloapp:latest .
 Run the app:
 
 ```bash
-docker run -d -p 5000:5000 helloapp
+docker run -d -p 5000:5000 myapp
 ```
 
 ![Run Container](https://github.com/user-attachments/assets/ebdb452b-d9af-4596-818d-fa41c2dc4ee1)
