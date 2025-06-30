@@ -38,7 +38,7 @@ Ensure you have the following installed:
 
 2. Set Up the Project
 - Open a terminal and create a project folder
-```
+```bash
 mkdir todo-docker-project
 cd todo-docker-project
 ```
@@ -46,11 +46,12 @@ cd todo-docker-project
 ![Dir creation](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/directory%20flow.png)
 
 - Initialize a new `Node.js` project
-```
+  
+```bash
 npm init -y
 ```
 - Install `Express.js`
-```
+```bash
 npm install express
 ```
 
@@ -58,7 +59,7 @@ npm install express
 - Create a file index.js in the project folder.
 - Add the following code to `index.js`
 
-```
+```javascript
 const express = require('express');
 const app = express();
 
@@ -93,12 +94,13 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
+
 ```
 4. Create a `Dockerfile`
 - In the same folder, create a file named Dockerfile.
 - Add the following content
 
-```
+```dockerfile
 # Use Node.js base image
 FROM node:18
 
@@ -124,6 +126,7 @@ CMD ["node", "index.js"]
 5. Create a `.dockerignore` File
 - In the project folder, create a file .dockerignore.
 - Add the following content to avoid unnecessary files in the Docker image:
+  
 ```
 node_modules
 npm-debug.log
@@ -132,7 +135,7 @@ npm-debug.log
 6. Build the Docker Image
 - Open the terminal in the project folder.
 - Build the image:
-```
+```bash
 docker build -t todo-app .
 ```
 
@@ -140,13 +143,13 @@ docker build -t todo-app .
 
 7. Run the Application in Docker
 - Start a container:
-```
+```bash
 docker run -p 3000:3000 todo-app
 ```
 ![run container](https://github.com/Pranith1Kumar/Devops_self/blob/26540cbd77fe662130f257c2f7b48cd7b3efdeae/Beginner/todo-app/docker%20container%20start.png)
 
 - Open a browser:
-```
+```bash
 http://localhost:3000/todos
 ```
 → Fetch all tasks.
@@ -154,35 +157,35 @@ You see the empty `[]` now you need to add tasks
 
 8. Push the Code to GitHub
 - Initialize a Git repository
-```
+```bash
 git init
 ```
 ![Intialized git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/git-init.png)
 - Add a .gitignore file and include:
-```
+```bash
 node_modules/
 ```
 - Stage and commit the code:
-```
+```bash
 git add .
 ```
-```
+```bash
 git commit -m "Initial commit - To-Do List App"
 ```
 ![adding git to current dir](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/git-add.png)
 - Create a new repository on GitHub and link it to your local repository:
-```
+```bash
 git remote add origin <your-github-repo-url>
 ```
 Ex: 
-```
+```bash
 git remote add origin https://github.com/Pranith1Kumar/Devops_self
 ```
-```
+```bash
 git branch -M main
 ```
 ![Intailized remote to git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/remote.png)
-```
+```bash
 git push -u origin main
 ```
 ![Push to git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/git-push.png)
@@ -191,14 +194,14 @@ Successfully addeed to git
 ![Successfully added to git](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/succ%20to%20github.png)
 
 9. Run the following command in powershell or cmd to add a task to the To-Do list
-```
+```powershell
 curl -X POST -H "Content-Type: application/json" -d "{\"task\":\"Learn Docker\"}" http://localhost:3000/todos
 ```
 
 ![Task added](https://github.com/Pranith1Kumar/Devops_self/blob/852597cfcee0939961aea2aea01a9be40ecdfe0d/Beginner/todo-app/task%20added%20succ.png)
 
 You will noice a output is updated with task added
-```
+```json
 {
     "todos": ["Learn Docker"]
 }
@@ -210,18 +213,18 @@ or
 
 10. Remove all the tasks
 - Run the cURL Command Open your terminal and use the following command
-```
+```powershell
 curl -X DELETE http://localhost:3000/todos
 ```
 View the Response if successful, you will see a response like this
-```
+```json
 {"message": "All tasks deleted!" }
 ```
 ![Successfull deletion of all tasks](https://github.com/Pranith1Kumar/Devops_shelf/blob/4aacc729a67becce223ece18fd43d6a1eda60f1a/Beginner/todo-app/delete%20todo.png)
 
 - Verify All Tasks Are Deleted
 - You can confirm by fetching the list of tasks with a GET request
-```
+```powershell
 curl -X GET http://localhost:3000/todo
 ```
 ![Verify all tasks are deleted](https://github.com/Pranith1Kumar/Devops_shelf/blob/4aacc729a67becce223ece18fd43d6a1eda60f1a/Beginner/todo-app/verify%20taskes%20are%20deleted.png)
@@ -239,7 +242,7 @@ curl -X GET http://localhost:3000/todo
 Log in to Docker Hub from the Command Line
 - Open your terminal.
 - Log in to Docker Hub using your Docker Hub credentials:
-```
+```bash
 docker login
 ```
 - Enter your Docker Hub username and password when prompted.
@@ -249,14 +252,14 @@ docker login
 Tag Your Docker Image
 - Before you can push the image to Docker Hub, you need to tag it with your Docker Hub username and a repository name.
 - If your image is named todo-app, you will tag it with the format username/repository-name:tag. For example:
-```
+```bash
 docker tag todo-app <your-dockerhub-username>/todo-app
 ```
 Replace `<your-dockerhub-username>` with your Docker Hub username.
 
 Push the Docker Image to Docker Hub
 - After tagging the image, push it to your Docker Hub repository:
-```
+```bash
 docker push <your-dockerhub-username>/todo-app
 ```
 Docker will start uploading the image to Docker Hub. It may take some time depending on the image size and your internet speed.
@@ -267,20 +270,24 @@ Docker will start uploading the image to Docker Hub. It may take some time depen
 12. Cleanup
 Steps to remove container:
 - Check the running container
-```docker ps```
-- To list all containers (Running,stopped,paused).
-```docker ps -a```
--  Copy the container id and use along with below command to stop container
+```bash
+docker ps
 ```
+- To list all containers (Running,stopped,paused).
+```bash
+docker ps -a
+```
+-  Copy the container id and use along with below command to stop container
+```bash
 docker stop <containerid>
 ```
 ![Docker ps](https://github.com/Pranith1Kumar/Devops_shelf/blob/7c8a96267e9e587177c779048874dbe27c0b63d1/Beginner/todo-app/docker%20ps.png)
 - Remove the container
-```
+```bash
 docker rm <containerid>
 ``` 
 - Run below command to list all docker images.
-```
+```bash
 docker images
 ```
 You can check the images listed there the container is deleted so along with container image aslo deleted.
